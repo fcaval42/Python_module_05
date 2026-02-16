@@ -6,7 +6,7 @@
 #  By: fcaval <fcaval@student.42.fr>             +#+  +:+       +#+         #
 #                                              +#+#+#+#+#+   +#+            #
 #  Created: 2026/02/06 11:39:25 by fcaval          #+#    #+#               #
-#  Updated: 2026/02/09 16:55:51 by fcaval          ###   ########.fr        #
+#  Updated: 2026/02/16 11:41:09 by fcaval          ###   ########.fr        #
 #                                                                           #
 # ************************************************************************* #
 
@@ -132,8 +132,7 @@ class TransactionStream(DataStream):
         operator = "+" if total > 0 else "-"
         self.operation = len(data_batch)
 
-        return f"{self.operation} operations, net flow: {operator}{total} "
-    "units"
+        return f"{self.operation} operations, net flow: {operator}{total}units"
 
     def get_stats(self):
         return dict(categorie=self.categorie,
